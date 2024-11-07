@@ -1,5 +1,234 @@
-h1:hover {
-  color: green;
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page__body {
+  margin: 60px;
+  font-family: "PT Sans", sans-serif;
+}
+
+.main-title {
+  margin: 0 0 40px;
+  font-size: 41px;
+  font-weight: 500;
+}
+
+.form__name,
+.form__age,
+.form__status,
+.form__university {
+  margin-bottom: 15px;
+}
+
+.form__age {
+  display: flex;
+  gap: 5px;
+}
+.form__age .form__number-input {
+  display: flex;
+  flex-direction: column;
+}
+.form__age .form__number-input button {
+  cursor: pointer;
+  background-color: #DFDFDF;
+  border: none;
+  width: 30px;
+  height: 22px;
+}
+.form__age .form__number-input button:first-of-type {
+  border-bottom: 1px solid #9D9D9D;
+}
+
+.form__university {
+  display: grid;
+  grid-template-columns: 143px 500px;
+}
+.form__university input {
+  margin-bottom: 9px;
+  margin-right: 15px;
+}
+.form__university p {
+  margin: 0;
+  font-size: 13px;
+  margin-left: 145px;
+  line-height: 17px;
+  color: #9D9D9D;
+  width: 300px;
+}
+.form__university button {
+  border: none;
+  cursor: pointer;
+}
+
+.form__university-inputs {
+  display: inline-block;
+}
+
+.form__add-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  vertical-align: middle;
+  background-color: inherit;
+}
+
+.form__remove-button {
+  margin-left: 5px;
+  width: 26px;
+  height: 26px;
+  background-color: #FC6363;
+  border-radius: 50%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.form__remove-button::before, .form__remove-button::after {
+  content: "";
+  position: absolute;
+  background-color: #FFFFFF;
+  transform: rotate(45deg);
+}
+.form__remove-button::before {
+  width: 60%;
+  height: 2px;
+}
+.form__remove-button::after {
+  width: 2px;
+  height: 60%;
+}
+
+.form__add-icon {
+  width: 26px;
+  height: 26px;
+  background-color: inherit;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+}
+.form__add-icon::before, .form__add-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+}
+.form__add-icon::before {
+  width: 60%;
+  height: 2px;
+}
+.form__add-icon::after {
+  width: 2px;
+  height: 60%;
+}
+
+.form__birthplace {
+  margin-bottom: 25px;
+}
+
+.form__input {
+  border: 1px solid #C3C3C3;
+  border-radius: 3px;
+  height: 44px;
+  padding: 0;
+  padding: 10px;
+  min-width: 300px;
+}
+.form__input option:hover {
+  background-color: red;
+}
+
+.form__label {
+  width: 140px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.form__label--required span {
+  color: #FC6363;
+}
+
+.form__input-name {
+  min-width: 500px;
+}
+
+.form__input-age {
+  min-width: 70px;
+  width: 70px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form__skills {
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.form__skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.form__skills-list label {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  gap: 10px;
+}
+
+.form__checkbox {
+  padding: 0;
+  list-style: none;
+}
+
+.form__button {
+  margin-left: 145px;
+  padding: 10px;
+  min-width: 139px;
+  height: 42px;
+  background-color: #FFE783;
+  border: none;
+  color: #9D9D9D;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.form__button:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+.form__button:active {
+  color: #000000;
+}
+
+.form__checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #C3C3C3;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.form__checkbox--bold + span {
+  font-weight: bold;
+}
+
+.form__checkbox:checked {
+  background-color: #FFE783;
+}
+
+.form__checkbox:checked::before {
+  content: "✔";
+  position: absolute;
+  left: 3px;
+  top: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
