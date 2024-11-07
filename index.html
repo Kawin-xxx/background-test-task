@@ -1,12 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Анкета</title>
-  <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
-  <h1>Анкета</h1>
+<body class="page__body">
+    <h1 class="main-title">Анкета</h1>
+
+    <form class="form" action="https://formspree.io/f/xanwgrae" method="post">
+
+        <div class="form__name">
+            <label class="form__label form__label--required" for="name">Имя<span>*</span></label>
+            <input class="form__input form__input-name" type="text" id="name" name="name" required/>
+        </div>
+
+        <div class="form__age">
+            <label class="form__label form__label--required" for="age">Возраст<span>*</span></label>
+            <input class="form__input form__input-age" type="number" id="age" name="age" value="0" required/>
+            <div class="form__number-input">
+                <button class="form__button-increment">+</button>
+                <button class="form__button-decrement">-</button>
+            </div>
+        </div>
+
+        <div class="form__status">
+            <label class="form__label form__label--required" for="status">Семейное положение<span>*</span></label>
+            <select class="form__input" name="status" id="status">
+                <option value="married">Не женат / не замужем</option>
+                <option value="single">Женат / замужем</option>
+            </select>
+        </div>
+
+        <div class="form__university">
+            <label class="form__label" for="university">ВУЗ</label>
+            <div class="form__university-inputs">
+                <div class="form__input-group">
+                    <input class="form__input" type="text" name="university" placeholder="Например, ВолГУ" />
+                    <button class="form__add-button">
+                        <div class="form__add-icon"></div>
+                        <span>Добавить ещё</span>
+                    </button>
+                </div>
+            </div>
+            <p>Укажите заведения, в которых вы учились.</p>
+        </div>
+
+        <div class="form__birthplace">
+            <div class="form__status">
+                <label class="form__label" for="birthplace">Место рождения</label>
+                <select class="form__input" name="birthplace" id="birthplace">
+                    <option value="another">Не важно</option>
+                    <option value="astrakhan">Астрахань</option>
+                    <option value="volgograd">Волгоград</option>
+                    <option value="volzhsky">Волжский</option>
+                    <option value="astrakhan">Астрахань</option>
+                    <option value="rostov-on-Donu">Ростов-на-Дону</option>
+                    <option value="saratov">Саратов</option>
+                    <option value="elista">Элиста</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form__skills">
+            <p class="form__label">Навыки</p>
+            <div class="form__skills-list">
+                <label>
+                    <input class="form__checkbox option" type="checkbox"/>
+                    <span>Общение</span>
+                </label>
+                <label>
+                    <input class="form__checkbox option" type="checkbox"/>
+                    <span>Иностранные языки</span>
+                </label>
+                <label>
+                    <input class="form__checkbox option" type="checkbox"/>
+                    <span>Бег с препятствиями</span>
+                </label>
+                <label>
+                    <input class="form__checkbox option" type="checkbox"/>
+                    <span>Быстрое чтение</span>
+                </label>
+                <label>
+                    <input class="form__checkbox option" type="checkbox"/>
+                    <span>Самозащита</span>
+                </label>
+                <label>
+                    <input class="form__checkbox option" type="checkbox"/>
+                    <span>Вождение</span>
+                </label>
+                <label>
+                    <input class="form__checkbox option" type="checkbox"/>
+                    <span>Программирование</span>
+                </label>
+                <label>
+                    <input class="form__checkbox option" type="checkbox"/>
+                    <span>Управление вертолетом</span>
+                </label>
+                <label>
+                    <input class="form__checkbox option" type="checkbox"/>
+                    <span>Оперное пение</span>
+                </label>
+                <label>
+                    <input class="form__checkbox form__checkbox--bold" type="checkbox" id="selectAll"/>
+                    <span>Выделить все</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="form__button-wrapper">
+            <button type="submit" class="form__button">Отправить</button>
+        </div>
+    </form>
+
+    <script src="main.js"></script>
 </body>
 </html>
